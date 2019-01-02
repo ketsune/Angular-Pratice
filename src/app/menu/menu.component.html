@@ -1,0 +1,17 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div>
+            <a href="https://mfec.udemy.com/" class="navbar-brand">in28minutes</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/welcome/in28minutes" class="nav-link">Home</a></li>
+                <li class="nav-item"><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/todos" class="nav-link">Todos</a></li>
+            </ul>
+            <ul class="justify-content-end navbar-nav navbar-collaspe my-2 my-lg-0">
+                <li class="nav-item"><a *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+                <li class="nav-item"><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
